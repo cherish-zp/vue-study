@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8" />
+        <title>初识vue</title>
+        <script src="../js/vue.js"></script>
+    </head>
+    <body>
+
+
+        <!-- 第一种写法
+        <div id="root">
+            单项数据绑定：<input type="text" v-bind:value="name" >  <br/>
+            双向数据绑定： <input type="text" v-model:value="name" > <br/>
+        </div>
+
+            -->
+        <!-- 简写方法-->   
+        <div id="root">
+            单项数据绑定：<input type="text" :value="name" >  <br/>
+            双向数据绑定： <input type="text" v-model="name" > <br/> 
+        </div>
+
+        <script type="text/javascript">
+            Vue.config.productionTip = false;
+            
+            new Vue({
+                el:"#root",
+                data:{
+                    name:"张鹏"
+                }
+            })
+        </script>
+    </body>
+</html>

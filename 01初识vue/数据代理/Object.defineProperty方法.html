@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8" />
+        <title>object.defineproperty方法</title>
+        <script src="../js/vue.js"></script>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            Vue.config.productionTip = false;
+            let person = {
+                name:"张三",
+                sex:'男'
+            }
+           
+            Object.defineProperty(person , 'age',{
+                value:19,
+                enumerable:true, //控制属性是否可以被枚举 ， 默认值是false
+                writable:true, //控制属性是否可以被i修改 ， 默认值是false
+            })
+
+
+            console.log(Object.keys(person))
+        </script>
+    </body>
+</html>
